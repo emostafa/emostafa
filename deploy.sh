@@ -8,7 +8,7 @@ then
 fi
 
 echo "Generating site"
-hugo
+hugo -t hucore
 
 echo "Copy published files to emostafa.github.io directoy"
 cp -r public/* ../emostafa.github.io
