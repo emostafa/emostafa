@@ -9,7 +9,7 @@ fi
 
 echo "Generating site"
 rm -rf public
-hugo -t hucore
+hugo -t hucore --baseURL https://emostafa.github.io/
 
 echo "Copy published files to emostafa.github.io directoy"
 cp -r public/* ../emostafa.github.io
