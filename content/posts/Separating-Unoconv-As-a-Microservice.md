@@ -30,7 +30,7 @@ namespace we created for unoconv is dcs `document-converter-service`.
   apiVersion: v1
   metadata:
     name: unoconv
-	namespace: test
+    namespace: test
   spec:
 	type: ExternalName
 	externalName: unoconv.unoconv.svc.cluster.local
@@ -45,7 +45,7 @@ namespace we created for unoconv is dcs `document-converter-service`.
    elephant.zoo.svc.cluster.local
    ```
 
- - now create the service using kubectl, assuming the file you created named `unoconv-local-service.yml'
+ - now create the service using kubectl, assuming the file you created named `unoconv-local-service.yml`:
 
    ```bash
    kubectl -n test create -f unoconv-local-service.yml
