@@ -3,7 +3,7 @@ title: "Separating Unoconv as a service"
 date: 2017-10-25T00:50:52+02:00
 ---
 
-At CloudInn we had unoconv (depends on openoffice) in our backend so we
+At CloudInn we had unoconv (depends on libreoffice) in our backend so we
 coult convert our reports from ods to PDF or xlsx. That meant that
 we had to add other 400mb to our base image. Also, It meant longer time
 for deployments to finish. We were annoyed, we must do something about that.
@@ -11,7 +11,7 @@ for deployments to finish. We were annoyed, we must do something about that.
 I took the initiave to rip out unoconv from the base image,
 Picked one of the unoconv images on docker hub, then created a new
 namespace, deployment and service on Kubernetes for unocov with 3 replicas.
-Now our base image decreased from 800mb to 400mb `good job (Y)`.
+Now our base image decreased from 600mb to 400mb give or take `good job (Y)`.
 
 No the only thing left is to make our backend from test, staging, live
 to consume the new unoconv service from the new namespace. At first,
